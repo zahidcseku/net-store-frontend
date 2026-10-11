@@ -147,14 +147,6 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .ribbon { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Separator band — thin full-width divider strip between home sections. */
-.separator-band { margin-top: 48px; }
-.separator-band img {
-  width: 100%;
-  display: block;
-  border-radius: var(--radius-lg);
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
