@@ -1,4 +1,4 @@
-# Bijli — Electronics Storefront
+# Electronics Storefront
 
 A React + Vite frontend for an online electronics store (laptops, desktops,
 monitors, phones, components, accessories), built to run against the
