@@ -1,0 +1,192 @@
+/* ============================================================
+   Grand opening popup
+   Animation core first (page recede, overlay, modal tilt, logo
+   wipe, word rise, rule draw, icon draw, CTA sheen), then layout,
+   then the ≤640px bottom-sheet variant.
+   ============================================================ */
+
+.go-page,#root.go-recede,#root.go-return{transform-origin:50% 0;will-change:transform}
+.go-recede{animation:goRecede 1.1s cubic-bezier(.16,1,.3,1) both;overflow:hidden}
+.go-return{animation:goReturn .7s cubic-bezier(.16,1,.3,1) both}
+@keyframes goRecede{from{transform:none;border-radius:0;filter:none}to{transform:translateY(14px) scale(.955);border-radius:22px;filter:saturate(.85)}}
+@keyframes goReturn{from{transform:translateY(14px) scale(.955);border-radius:22px;filter:saturate(.85)}to{transform:none;border-radius:0;filter:none}}
+
+.go-ov{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;animation:goOvIn .9s cubic-bezier(.16,1,.3,1) both}
+.go-ov-out{animation:goOvOut .5s cubic-bezier(.4,0,.2,1) both}
+@keyframes goOvIn{from{background:rgba(10,17,40,0);backdrop-filter:blur(0) saturate(100%);-webkit-backdrop-filter:blur(0) saturate(100%)}to{background:rgba(10,17,40,.38);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%)}}
+@keyframes goOvOut{from{background:rgba(10,17,40,.38);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%)}to{background:rgba(10,17,40,0);backdrop-filter:blur(0) saturate(100%);-webkit-backdrop-filter:blur(0) saturate(100%)}}
+
+.go-stage{perspective:1400px}
+.go-modal{transform-origin:50% 100%;animation:goModalIn 1.25s cubic-bezier(.16,1,.3,1) .12s both}
+.go-modal-out{animation:goModalOut .45s cubic-bezier(.4,0,1,1) both}
+@keyframes goModalIn{0%{opacity:0;transform:translateY(60px) scale(.9) rotateX(14deg);filter:blur(12px)}55%{opacity:1;filter:blur(0)}75%{transform:translateY(-3px) scale(1.006) rotateX(0)}100%{opacity:1;transform:none;filter:blur(0)}}
+@keyframes goModalOut{to{opacity:0;transform:translateY(24px) scale(.96);filter:blur(8px)}}
+
+.go-strip{position:relative;overflow:hidden}
+.go-strip:after{content:"";position:absolute;top:-50%;bottom:-50%;width:45%;left:0;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,255,255,0));animation:goGlide 2.2s cubic-bezier(.45,0,.2,1) .7s both;pointer-events:none}
+@keyframes goGlide{from{transform:translateX(-110%)}to{transform:translateX(260%)}}
+
+.go-logo{animation:goWipe 1.2s cubic-bezier(.65,0,.15,1) .5s both}
+@keyframes goWipe{from{clip-path:inset(0 100% 0 0);opacity:.2;transform:translateX(-8px)}to{clip-path:inset(0 0 0 0);opacity:1;transform:none}}
+
+.go-in{animation:goUp 1s cubic-bezier(.16,1,.3,1) both}
+@keyframes goUp{from{opacity:0;transform:translateY(16px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+
+.go-w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .04em .14em;margin-bottom:-.14em}
+.go-wi{display:inline-block;animation:goWord 1.1s cubic-bezier(.16,1,.3,1) both}
+@keyframes goWord{from{transform:translateY(105%) rotate(3deg);opacity:0}to{transform:none;opacity:1}}
+
+.go-rule{animation:goRule 1.2s cubic-bezier(.65,0,.15,1) both}
+@keyframes goRule{from{clip-path:inset(0 50% 0 50%)}to{clip-path:inset(0 0 0 0)}}
+
+.go-draw path,.go-draw circle,.go-draw rect{stroke-dasharray:80;stroke-dashoffset:80;animation:goDraw 1.4s cubic-bezier(.65,0,.15,1) both;animation-delay:inherit}
+@keyframes goDraw{to{stroke-dashoffset:0}}
+
+.go-cta{position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1),background .25s ease}
+.go-cta:hover{background:#ffab2e;transform:translateY(-2px) scale(1.02);box-shadow:0 14px 30px -10px rgba(255,159,10,.75)}
+.go-cta:active{transform:scale(.98);transition-duration:.1s}
+.go-cta:after{content:"";position:absolute;top:0;bottom:0;left:0;width:35%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:goSheen 1.6s cubic-bezier(.45,0,.2,1) 2s both;pointer-events:none}
+@keyframes goSheen{from{transform:translateX(-120%) skewX(-14deg)}to{transform:translateX(320%) skewX(-14deg)}}
+.go-arrow{transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.go-cta:hover .go-arrow{transform:translate(3px,-3px)}
+.go-ghost{transition:border-color .3s ease,transform .5s cubic-bezier(.16,1,.3,1),background .3s ease}
+.go-ghost:hover{border-color:var(--navy-700);background:var(--paper);transform:translateY(-2px)}
+.go-x{background:transparent;border:none;border-radius:999px;display:flex;align-items:center;justify-content:center;transition:background .3s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+.go-x:hover{background:var(--navy-100);transform:rotate(90deg)}
+
+@media (prefers-reduced-motion:reduce){
+  .go-recede,.go-return,.go-ov,.go-ov-out,.go-modal,.go-modal-out,.go-strip:after,.go-logo,.go-in,.go-wi,.go-rule,.go-cta:after,.go-draw path,.go-draw circle,.go-draw rect{animation:none!important;stroke-dashoffset:0}
+}
+
+/* ---------------- Layout ---------------- */
+
+.go-modal {
+  position: relative;
+  width: 600px;
+  max-width: calc(100vw - 32px);
+  background: var(--surface);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 12px 32px rgba(10, 17, 40, 0.16),
+    0 48px 96px -32px rgba(10, 17, 40, 0.55);
+  outline: none;
+}
+
+.go-strip {
+  height: 88px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.go-logo { height: 30px; width: auto; }
+
+.go-body {
+  padding: 36px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.go-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--amber-dim);
+  color: var(--amber-ink);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.go-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--navy-950);
+}
+
+.go-copy {
+  max-width: 440px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.go-trust { position: relative; width: 100%; padding: 15px 0; }
+.go-trust ul { display: flex; justify-content: center; gap: 30px; }
+.go-trust li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy-800);
+  white-space: nowrap;
+}
+.go-draw {
+  fill: none;
+  stroke: var(--navy-700);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.go-rule-top, .go-rule-bottom { position: absolute; left: 0; right: 0; height: 1px; background: var(--line); }
+.go-rule-top { top: 0; }
+.go-rule-bottom { bottom: 0; }
+
+.go-actions { display: flex; gap: 12px; justify-content: center; }
+.go-arrow { flex-shrink: 0; }
+
+.go-x {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  color: var(--navy-700);
+}
+
+.go-grab { display: none; }
+
+/* ------------- Mobile: bottom sheet ------------- */
+
+@keyframes goSheetIn { from { transform: translateY(100%); } to { transform: none; } }
+
+@media (max-width: 640px) {
+  .go-ov { align-items: flex-end; }
+  .go-modal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    animation: goSheetIn 1.25s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+  }
+  .go-grab {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(16, 24, 40, 0.22);
+    z-index: 2;
+  }
+  .go-logo { height: 24px; }
+  .go-title { font-size: 26px; }
+  .go-trust-3 { display: none; }
+  .go-actions { flex-direction: column; width: 100%; }
+  .go-actions .btn { width: 100%; }
+  .go-body { padding: 28px 24px 34px; }
+}
