@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import "./GrandOpeningPopup.css";
 
-const OPENING_DATE = "11 October 2026";
+const OPENING_DATE = "24 October 2026";
 
 const TITLE_WORDS = [
   { word: "We're", delay: "0.85s" },
