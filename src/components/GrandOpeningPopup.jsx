@@ -123,7 +123,7 @@ export default function GrandOpeningPopup() {
           <span className="go-grab" aria-hidden="true" />
 
           <div className="go-strip">
-            <img src="/logo.png" alt="the net store" className="go-logo" />
+            <img src="/logo.webp" alt="the net store" className="go-logo" />
           </div>
 
           <button type="button" className="go-x" aria-label="Close" onClick={close}>

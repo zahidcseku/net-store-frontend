@@ -6,7 +6,10 @@ import CategoryTiles from "../components/CategoryTiles";
 import ProductCard from "../components/ProductCard";
 import { getProducts } from "../lib/api";
 
-const RIBBON_IMAGES = ["/small1.jpg", "/small2.jpg", "/small3.jpg", "/small4.jpg"];
+const OFFER_IMAGES = [
+  "/offer-1.webp", "/offer-2.webp", "/offer-3.webp", "/offer-4.webp",
+  "/offer-5.webp", "/offer-6.webp", "/offer-7.webp",
+];
 
 export default function HomePage() {
   const [deals, setDeals] = useState(null);
@@ -31,12 +34,12 @@ export default function HomePage() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="hero-frame">
-          <img src="/hero.jpg" alt="the net store — electronics, delivered fast" />
+          <img src="/hero.webp" alt="the net store — electronics, delivered fast" />
         </div>
       </motion.section>
 
-      <section className="container ribbon" aria-label="Promotions">
-        {RIBBON_IMAGES.map((src, i) => (
+      <section className="container ribbon" aria-label="Offers">
+        {OFFER_IMAGES.map((src, i) => (
           <motion.div
             key={src}
             initial={{ opacity: 0, y: 24 }}
@@ -44,13 +47,23 @@ export default function HomePage() {
             transition={{ duration: 0.55, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="ribbon-card">
-              <img src={src} alt="" loading="lazy" />
+              <img src={src} alt={`Offer ${i + 1}`} loading="lazy" />
             </div>
           </motion.div>
         ))}
       </section>
 
       <CategoryTiles />
+
+      <section className="container separator-band" aria-hidden="true">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <img src="/separator1.webp" alt="" loading="lazy" />
+        </motion.div>
+      </section>
 
       <section className="container section">
         <div className="section-head">

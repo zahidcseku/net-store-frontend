@@ -45,7 +45,7 @@ export default function Header() {
         </button>
 
         <Link to="/" className="brand" aria-label="the net store — home">
-          <img src="/logo.png" alt="the net store" className="brand-logo" />
+          <img src="/logo.webp" alt="the net store" className="brand-logo" />
         </Link>
 
         <ActionSearchBar />
