@@ -1,0 +1,20 @@
+/* Full-bleed band so the tint runs edge-to-edge; content stays centered
+   inside the container-width grid. */
+.trust-band {
+  background: #fafbff;
+  border-bottom: 1px solid var(--line);
+}
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+/* .container (index.css) loads after component CSS and would otherwise
+   flatten the vertical padding — out-specify it. */
+.container.trust-strip { padding: 30px 20px; }
+.trust-item { display: flex; align-items: center; gap: 10px; color: var(--amber); }
+.trust-item strong { color: var(--ink); font-size: 13.5px; font-weight: 600; }
+
+@media (max-width: 760px) {
+  .trust-strip { grid-template-columns: 1fr 1fr; row-gap: 14px; }
+}

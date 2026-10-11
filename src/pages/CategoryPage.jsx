@@ -16,7 +16,7 @@ export default function CategoryPage() {
   const category = getCategoryById(categoryId);
   const [products, setProducts] = useState(null);
   const [selectedBrands, setSelectedBrands] = useState([]);
-  const [maxPrice, setMaxPrice] = useState(300000);
+  const [maxPrice, setMaxPrice] = useState(2000);
 
   useEffect(() => {
     setProducts(null);
@@ -88,9 +88,9 @@ export default function CategoryPage() {
           )}
 
           <div className="filter-block">
-            <h3>Max price: ৳{maxPrice.toLocaleString("en-IN")}</h3>
+            <h3>Max price: £{maxPrice.toLocaleString("en-GB")}</h3>
             <input
-              type="range" min="2000" max="300000" step="1000"
+              type="range" min="20" max="2000" step="10"
               value={maxPrice}
               onChange={(e) => setMaxPrice(Number(e.target.value))}
               className="price-slider"

@@ -1,0 +1,107 @@
+/* NavigationMenu — shadcn/radix navigation-menu pattern, ported to plain CSS.
+   Trigger: h-9 rounded-md, hover/open accent bg, chevron rotates when open.
+   Content: popover panel below the trigger (viewport=false layout). */
+
+.nm-root {
+  position: relative;
+  display: flex;
+  max-width: max-content;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.nm-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nm-item { position: relative; }
+
+.nm-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.nm-trigger:hover,
+.nm-trigger[data-state="open"],
+.nm-trigger[data-active="true"] {
+  background: var(--paper);
+  color: var(--navy-900);
+}
+.nm-chevron { opacity: 0.6; transition: transform 0.3s ease; }
+.nm-trigger[data-state="open"] .nm-chevron { transform: rotate(180deg); }
+
+.nm-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  z-index: 50;
+  animation: nm-in 0.2s ease;
+}
+@keyframes nm-in {
+  from { opacity: 0; transform: translateY(-4px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.nm-panel {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.nm-panel a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+.nm-panel a:hover { background: var(--paper); }
+
+.nm-featured {
+  width: 200px;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, var(--paper), var(--surface));
+  justify-content: flex-end;
+}
+.nm-title { font-size: 13.5px; font-weight: 600; line-height: 1.2; }
+.nm-desc { margin: 0; font-size: 12px; line-height: 1.45; color: var(--ink-faint); }
+
+.nm-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 860px) {
+  .nm-root { max-width: none; }
+  .nm-list { flex-direction: column; align-items: stretch; }
+  .nm-trigger { width: 100%; justify-content: flex-start; }
+  .nm-content { position: static; margin-top: 0; animation: none; }
+  .nm-panel { border: none; box-shadow: none; border-radius: 0; padding: 0 0 0 14px; background: transparent; }
+  .nm-featured { width: auto; background: none; }
+}

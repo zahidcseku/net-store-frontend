@@ -117,7 +117,7 @@ export async function getRelatedProducts(product, limit = 4) {
 // payload shape with their support before wiring this up for real.
 export async function placeOrder(orderPayload) {
   if (USE_MOCKS) {
-    const orderId = "BJ" + Math.floor(100000 + Math.random() * 900000);
+    const orderId = "NS" + Math.floor(100000 + Math.random() * 900000);
     return mockDelay({ orderId, status: "confirmed", ...orderPayload }, 600);
   }
   return request("/orders", { method: "POST", body: JSON.stringify(orderPayload) });

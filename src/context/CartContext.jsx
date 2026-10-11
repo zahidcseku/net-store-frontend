@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useReducer } from "react";
 
 const CartContext = createContext(null);
-const STORAGE_KEY = "bijli-cart-v1";
+const STORAGE_KEY = "netstore-cart-v2"; // bumped from v1 when prices were converted to GBP, to drop stale carts
 
 function loadInitial() {
   try {

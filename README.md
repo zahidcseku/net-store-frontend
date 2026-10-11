@@ -1,12 +1,12 @@
-# Electronics Storefront
+# Net Store — Electronics Storefront
 
 A React + Vite frontend for an online electronics store (laptops, desktops,
 monitors, phones, components, accessories), built to run against the
 **Dizi Cashier** POS backend (`globalapp.dizicashier.com`).
 
-The store is currently named **Bijli** as a placeholder — rename it in one
-place: `src/components/Header.jsx` (brand mark/name) and `index.html`
-(`<title>`).
+The store is named **Net Store** — to rename it, change the brand name and
+mark in `src/components/Header.jsx` and `src/components/Footer.jsx`, and the
+`<title>` in `index.html`.
 
 ## What's included
 
@@ -14,8 +14,8 @@ place: `src/components/Header.jsx` (brand mark/name) and `index.html`
 - Category browsing: subcategory nav, brand filters, price slider, sorting
 - Product detail page: specs table, related products, add to cart / buy now
 - Cart with quantity editing, persisted to `localStorage`
-- Checkout: delivery details form + payment method (Cash on Delivery, bKash,
-  Nagad, Card) — the four payment options commonly used by BD e-commerce
+- Checkout: delivery details form + payment method (Card, PayPal, Apple Pay,
+  Google Pay)
 - Order confirmation page
 - Search
 - Fully responsive, keyboard-accessible, works down to mobile widths
@@ -74,8 +74,8 @@ fetching anything directly. That's the seam.
    - Add an `imageUrl` field to products and pass it into `<ProductImage
      imageUrl={...} />` (already wired to prefer a real image if given)
 
-4. Currency: prices are formatted as BDT via `src/lib/currency.js`
-   (`formatBDT`). If Dizi Cashier returns prices in a different unit or
+4. Currency: prices are formatted as GBP via `src/lib/currency.js`
+   (`formatPrice`). If Dizi Cashier returns prices in a different unit or
    currency, adjust there.
 
 ## Project structure
@@ -99,8 +99,7 @@ src/
 
 Palette and type were chosen deliberately for this brief rather than
 defaulted: deep navy (`--navy-950`/`--navy-800`) as the base with a single
-amber accent (`--amber`) reserved for prices and calls-to-action, Space
-Grotesk for headings and Manrope for body text. Local payment methods
-(Cash on Delivery, bKash, Nagad) are treated as first-class, not an
-afterthought, since that's how checkout actually works for a Bangladesh
-audience.
+amber accent (`--amber`) reserved for prices and calls-to-action, Libre
+Baskerville for headings and Quattrocento Sans for body text. UK payment
+methods (Card, PayPal, Apple Pay, Google Pay) are treated as first-class,
+not an afterthought, and prices are shown in GBP with UK-style grouping.

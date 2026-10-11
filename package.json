@@ -1,5 +1,5 @@
 {
-  "name": "bijli-storefront",
+  "name": "net-store",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^13.4.0",
+    "lucide-react": "^0.383.0",
+    "radix-ui": "^1.6.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "lucide-react": "^0.383.0"
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import ProductImage from "./ProductImage";
 import Rating from "./Rating";
-import { formatBDT, discountPercent } from "../lib/currency";
+import { formatPrice, discountPercent } from "../lib/currency";
 import { useCart } from "../context/CartContext";
 import "./ProductCard.css";
 
@@ -22,8 +22,8 @@ export default function ProductCard({ product }) {
         <Link to={`/product/${product.slug}`} className="pc-name">{product.name}</Link>
         <Rating value={product.rating} count={product.reviewCount} />
         <div className="pc-price-row">
-          <span className="pc-price">{formatBDT(product.price)}</span>
-          {product.oldPrice && <span className="pc-old-price">{formatBDT(product.oldPrice)}</span>}
+          <span className="pc-price">{formatPrice(product.price)}</span>
+          {product.oldPrice && <span className="pc-old-price">{formatPrice(product.oldPrice)}</span>}
         </div>
         <button
           className="btn btn-dark btn-sm btn-block pc-add"

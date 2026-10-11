@@ -65,67 +65,67 @@ export const brands = [
 // for real image URLs once the backend returns them).
 const productSeed = [
   // Laptops
-  { name: "ASUS Vivobook 15", brand: "ASUS", category: "laptops", sub: "Everyday", price: 62990, oldPrice: 69990, rating: 4.4, reviews: 212, stock: 18,
+  { name: "ASUS Vivobook 15", brand: "ASUS", category: "laptops", sub: "Everyday", price: 549, oldPrice: 599, rating: 4.4, reviews: 212, stock: 18,
     specs: { CPU: "Intel Core i5-1334U", RAM: "16GB", Storage: "512GB SSD", Display: "15.6\" FHD IPS", Battery: "Up to 10 hrs" } },
-  { name: "Lenovo IdeaPad Slim 3", brand: "Lenovo", category: "laptops", sub: "Everyday", price: 54500, oldPrice: null, rating: 4.2, reviews: 143, stock: 25,
+  { name: "Lenovo IdeaPad Slim 3", brand: "Lenovo", category: "laptops", sub: "Everyday", price: 429, oldPrice: null, rating: 4.2, reviews: 143, stock: 25,
     specs: { CPU: "AMD Ryzen 5 7530U", RAM: "8GB", Storage: "512GB SSD", Display: "14\" FHD", Battery: "Up to 9 hrs" } },
-  { name: "Dell Latitude 5440", brand: "Dell", category: "laptops", sub: "Business", price: 98500, oldPrice: 109000, rating: 4.6, reviews: 87, stock: 9,
+  { name: "Dell Latitude 5440", brand: "Dell", category: "laptops", sub: "Business", price: 849, oldPrice: 949, rating: 4.6, reviews: 87, stock: 9,
     specs: { CPU: "Intel Core i7-1355U", RAM: "16GB", Storage: "1TB SSD", Display: "14\" FHD", Security: "Fingerprint + TPM 2.0" } },
-  { name: "HP EliteBook 840 G10", brand: "HP", category: "laptops", sub: "Business", price: 112000, oldPrice: null, rating: 4.5, reviews: 61, stock: 6,
+  { name: "HP EliteBook 840 G10", brand: "HP", category: "laptops", sub: "Business", price: 1049, oldPrice: null, rating: 4.5, reviews: 61, stock: 6,
     specs: { CPU: "Intel Core i7-1365U", RAM: "16GB", Storage: "512GB SSD", Display: "14\" WUXGA", Security: "IR Camera, TPM" } },
-  { name: "ASUS ROG Strix G16", brand: "ASUS", category: "laptops", sub: "Gaming", price: 189900, oldPrice: 205000, rating: 4.7, reviews: 154, stock: 7,
+  { name: "ASUS ROG Strix G16", brand: "ASUS", category: "laptops", sub: "Gaming", price: 1399, oldPrice: 1549, rating: 4.7, reviews: 154, stock: 7,
     specs: { CPU: "Intel Core i7-14650HX", GPU: "RTX 4060 8GB", RAM: "16GB", Storage: "1TB SSD", Display: "16\" QHD 165Hz" } },
-  { name: "Acer Nitro V15", brand: "Acer", category: "laptops", sub: "Gaming", price: 124500, oldPrice: null, rating: 4.3, reviews: 98, stock: 14,
+  { name: "Acer Nitro V15", brand: "Acer", category: "laptops", sub: "Gaming", price: 899, oldPrice: null, rating: 4.3, reviews: 98, stock: 14,
     specs: { CPU: "Intel Core i5-13420H", GPU: "RTX 4050 6GB", RAM: "16GB", Storage: "512GB SSD", Display: "15.6\" FHD 144Hz" } },
-  { name: "Apple MacBook Air 13 (M3)", brand: "Apple", category: "laptops", sub: "Creator", price: 148900, oldPrice: null, rating: 4.8, reviews: 301, stock: 11,
+  { name: "Apple MacBook Air 13 (M3)", brand: "Apple", category: "laptops", sub: "Creator", price: 1099, oldPrice: null, rating: 4.8, reviews: 301, stock: 11,
     specs: { CPU: "Apple M3", RAM: "8GB", Storage: "256GB SSD", Display: "13.6\" Liquid Retina", Battery: "Up to 18 hrs" } },
-  { name: "MSI Creator Z16", brand: "MSI", category: "laptops", sub: "Creator", price: 215000, oldPrice: 229000, rating: 4.5, reviews: 34, stock: 4,
+  { name: "MSI Creator Z16", brand: "MSI", category: "laptops", sub: "Creator", price: 1799, oldPrice: 1949, rating: 4.5, reviews: 34, stock: 4,
     specs: { CPU: "Intel Core i9-13900H", GPU: "RTX 4060 8GB", RAM: "32GB", Storage: "1TB SSD", Display: "16\" QHD+ Touch" } },
 
   // Desktops
-  { name: "Bijli Ryzen Home Office PC", brand: "ASUS", category: "desktops", sub: "Office", price: 45000, oldPrice: null, rating: 4.3, reviews: 42, stock: 20,
+  { name: "Net Store Ryzen Home Office PC", brand: "ASUS", category: "desktops", sub: "Office", price: 399, oldPrice: null, rating: 4.3, reviews: 42, stock: 20,
     specs: { CPU: "AMD Ryzen 5 5600G", RAM: "8GB", Storage: "512GB SSD", GPU: "Integrated", Case: "Mid Tower" } },
-  { name: "MSI Aegis RS RTX 4070", brand: "MSI", category: "desktops", sub: "Gaming", price: 245000, oldPrice: 259000, rating: 4.6, reviews: 27, stock: 5,
+  { name: "MSI Aegis RS RTX 4070", brand: "MSI", category: "desktops", sub: "Gaming", price: 1899, oldPrice: 2049, rating: 4.6, reviews: 27, stock: 5,
     specs: { CPU: "Intel Core i7-14700F", GPU: "RTX 4070 12GB", RAM: "32GB", Storage: "1TB NVMe", PSU: "750W Gold" } },
-  { name: "HP All-in-One 24", brand: "HP", category: "desktops", sub: "All-in-One", price: 68900, oldPrice: null, rating: 4.1, reviews: 19, stock: 13,
+  { name: "HP All-in-One 24", brand: "HP", category: "desktops", sub: "All-in-One", price: 599, oldPrice: null, rating: 4.1, reviews: 19, stock: 13,
     specs: { CPU: "Intel Core i5-1235U", RAM: "8GB", Storage: "512GB SSD", Display: "23.8\" FHD Touch" } },
 
   // Monitors
-  { name: "LG UltraGear 27\" 165Hz", brand: "LG", category: "monitors", sub: "Gaming", price: 32900, oldPrice: 36900, rating: 4.6, reviews: 176, stock: 30,
+  { name: "LG UltraGear 27\" 165Hz", brand: "LG", category: "monitors", sub: "Gaming", price: 249, oldPrice: 289, rating: 4.6, reviews: 176, stock: 30,
     specs: { Panel: "IPS", Resolution: "QHD 2560x1440", Refresh: "165Hz", Response: "1ms", Ports: "HDMI, DP" } },
-  { name: "Samsung 24\" Essential", brand: "Samsung", category: "monitors", sub: "Everyday", price: 12500, oldPrice: null, rating: 4.3, reviews: 240, stock: 55,
+  { name: "Samsung 24\" Essential", brand: "Samsung", category: "monitors", sub: "Everyday", price: 99, oldPrice: null, rating: 4.3, reviews: 240, stock: 55,
     specs: { Panel: "VA", Resolution: "FHD 1920x1080", Refresh: "75Hz", Ports: "HDMI, VGA" } },
-  { name: "ASUS TUF 34\" Ultrawide", brand: "ASUS", category: "monitors", sub: "Ultrawide", price: 58900, oldPrice: null, rating: 4.5, reviews: 41, stock: 8,
+  { name: "ASUS TUF 34\" Ultrawide", brand: "ASUS", category: "monitors", sub: "Ultrawide", price: 449, oldPrice: null, rating: 4.5, reviews: 41, stock: 8,
     specs: { Panel: "VA Curved", Resolution: "WQHD 3440x1440", Refresh: "144Hz", Ports: "HDMI x2, DP" } },
-  { name: "Acer Nitro 27\" 240Hz", brand: "Acer", category: "monitors", sub: "Gaming", price: 41900, oldPrice: 44900, rating: 4.4, reviews: 63, stock: 12,
+  { name: "Acer Nitro 27\" 240Hz", brand: "Acer", category: "monitors", sub: "Gaming", price: 329, oldPrice: 359, rating: 4.4, reviews: 63, stock: 12,
     specs: { Panel: "IPS", Resolution: "FHD 1920x1080", Refresh: "240Hz", Response: "0.5ms" } },
 
   // Phones
-  { name: "Samsung Galaxy A55", brand: "Samsung", category: "phones", sub: "Mid-range", price: 42999, oldPrice: 45999, rating: 4.4, reviews: 388, stock: 40,
+  { name: "Samsung Galaxy A55", brand: "Samsung", category: "phones", sub: "Mid-range", price: 319, oldPrice: 349, rating: 4.4, reviews: 388, stock: 40,
     specs: { Display: "6.6\" Super AMOLED", RAM: "8GB", Storage: "128GB", Camera: "50MP OIS", Battery: "5000mAh" } },
-  { name: "Apple iPhone 15", brand: "Apple", category: "phones", sub: "Flagship", price: 109900, oldPrice: null, rating: 4.7, reviews: 512, stock: 15,
+  { name: "Apple iPhone 15", brand: "Apple", category: "phones", sub: "Flagship", price: 799, oldPrice: null, rating: 4.7, reviews: 512, stock: 15,
     specs: { Display: "6.1\" Super Retina XDR", Storage: "128GB", Camera: "48MP Main", Chip: "A16 Bionic" } },
-  { name: "Xiaomi Redmi Note 13", brand: "Xiaomi", category: "phones", sub: "Budget", price: 18999, oldPrice: 20999, rating: 4.2, reviews: 601, stock: 70,
+  { name: "Xiaomi Redmi Note 13", brand: "Xiaomi", category: "phones", sub: "Budget", price: 149, oldPrice: 179, rating: 4.2, reviews: 601, stock: 70,
     specs: { Display: "6.67\" AMOLED 120Hz", RAM: "6GB", Storage: "128GB", Camera: "108MP", Battery: "5000mAh" } },
-  { name: "Samsung Galaxy S24", brand: "Samsung", category: "phones", sub: "Flagship", price: 94999, oldPrice: 99999, rating: 4.6, reviews: 204, stock: 10,
+  { name: "Samsung Galaxy S24", brand: "Samsung", category: "phones", sub: "Flagship", price: 749, oldPrice: 799, rating: 4.6, reviews: 204, stock: 10,
     specs: { Display: "6.2\" Dynamic AMOLED 2X", RAM: "8GB", Storage: "256GB", Camera: "50MP Triple", AI: "Galaxy AI" } },
 
   // Components
-  { name: "MSI GeForce RTX 4060 Ventus", brand: "MSI", category: "components", sub: "Graphics Cards", price: 43500, oldPrice: null, rating: 4.5, reviews: 58, stock: 16,
+  { name: "MSI GeForce RTX 4060 Ventus", brand: "MSI", category: "components", sub: "Graphics Cards", price: 329, oldPrice: null, rating: 4.5, reviews: 58, stock: 16,
     specs: { VRAM: "8GB GDDR6", Interface: "PCIe 4.0", Ports: "HDMI, DP x3", Length: "220mm" } },
-  { name: "Samsung 970 EVO 1TB NVMe", brand: "Samsung", category: "components", sub: "Storage", price: 9800, oldPrice: 10800, rating: 4.7, reviews: 320, stock: 90,
+  { name: "Samsung 970 EVO 1TB NVMe", brand: "Samsung", category: "components", sub: "Storage", price: 69, oldPrice: 79, rating: 4.7, reviews: 320, stock: 90,
     specs: { Capacity: "1TB", Interface: "NVMe PCIe 3.0", "Read Speed": "3500MB/s" } },
-  { name: "Kingston Fury 16GB DDR4", brand: "ASUS", category: "components", sub: "Memory", price: 4200, oldPrice: null, rating: 4.6, reviews: 145, stock: 120,
+  { name: "Kingston Fury 16GB DDR4", brand: "ASUS", category: "components", sub: "Memory", price: 29, oldPrice: null, rating: 4.6, reviews: 145, stock: 120,
     specs: { Capacity: "16GB (1x16GB)", Speed: "3200MHz", Type: "DDR4 UDIMM" } },
 
   // Accessories
-  { name: "Logitech MX Master 3S", brand: "Logitech", category: "accessories", sub: "Mice", price: 9500, oldPrice: 10500, rating: 4.8, reviews: 410, stock: 60,
+  { name: "Logitech MX Master 3S", brand: "Logitech", category: "accessories", sub: "Mice", price: 89, oldPrice: 99, rating: 4.8, reviews: 410, stock: 60,
     specs: { Connectivity: "Bluetooth / USB Receiver", DPI: "8000", Battery: "Up to 70 days" } },
-  { name: "Logitech G Pro X Keyboard", brand: "Logitech", category: "accessories", sub: "Keyboards", price: 14200, oldPrice: null, rating: 4.6, reviews: 88, stock: 22,
+  { name: "Logitech G Pro X Keyboard", brand: "Logitech", category: "accessories", sub: "Keyboards", price: 119, oldPrice: null, rating: 4.6, reviews: 88, stock: 22,
     specs: { Switch: "Hot-swappable mechanical", Layout: "TKL", Backlight: "RGB" } },
-  { name: "Anti-Theft Laptop Backpack 15.6\"", brand: "ASUS", category: "accessories", sub: "Bags", price: 2450, oldPrice: 2900, rating: 4.3, reviews: 233, stock: 150,
+  { name: "Anti-Theft Laptop Backpack 15.6\"", brand: "ASUS", category: "accessories", sub: "Bags", price: 22, oldPrice: 29, rating: 4.3, reviews: 233, stock: 150,
     specs: { Fits: "Up to 15.6\" laptops", Material: "Water-resistant fabric", USB: "Charging port" } },
-  { name: "Samsung Galaxy Buds FE", brand: "Samsung", category: "accessories", sub: "Audio", price: 6900, oldPrice: null, rating: 4.4, reviews: 176, stock: 45,
+  { name: "Samsung Galaxy Buds FE", brand: "Samsung", category: "accessories", sub: "Audio", price: 59, oldPrice: null, rating: 4.4, reviews: 176, stock: 45,
     specs: { Type: "In-ear, ANC", Battery: "Up to 30 hrs with case", Connectivity: "Bluetooth 5.3" } },
 ];
 
@@ -150,7 +150,7 @@ export const products = productSeed.map((p, i) => ({
   specs: p.specs,
   description:
     `The ${p.name} pairs ${Object.values(p.specs)[0]?.toLowerCase() || "solid specs"} with everyday reliability, ` +
-    `backed by Bijli's official warranty and after-sales support across Bangladesh.`,
+    `backed by Net Store's official warranty and after-sales support across the UK.`,
 }));
 
 export function getCategoryById(id) {

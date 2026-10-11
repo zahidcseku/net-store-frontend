@@ -6,7 +6,7 @@ import ProductImage from "../components/ProductImage";
 import Rating from "../components/Rating";
 import QuantityStepper from "../components/QuantityStepper";
 import ProductCard from "../components/ProductCard";
-import { formatBDT, discountPercent } from "../lib/currency";
+import { formatPrice, discountPercent } from "../lib/currency";
 import { getProductBySlug, getRelatedProducts, getCategoryById } from "../lib/api";
 import { useCart } from "../context/CartContext";
 import "./ProductPage.css";
@@ -66,10 +66,10 @@ export default function ProductPage() {
           <Rating value={product.rating} count={product.reviewCount} size={15} />
 
           <div className="pd-price-block">
-            <span className="pd-price">{formatBDT(product.price)}</span>
+            <span className="pd-price">{formatPrice(product.price)}</span>
             {product.oldPrice && (
               <>
-                <span className="pd-old-price">{formatBDT(product.oldPrice)}</span>
+                <span className="pd-old-price">{formatPrice(product.oldPrice)}</span>
                 <span className="pd-pct">Save {pct}%</span>
               </>
             )}
