@@ -12,7 +12,6 @@ import TrackOrderPage from "./pages/TrackOrderPage";
 import AccountPage from "./pages/AccountPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import TrustStrip from "./components/TrustStrip";
-import GrandOpeningPopup from "./components/GrandOpeningPopup";
 
 export default function App() {
   return (
@@ -34,7 +33,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <GrandOpeningPopup />
     </div>
   );
 }
