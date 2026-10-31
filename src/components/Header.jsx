@@ -23,9 +23,9 @@ export default function Header() {
     <header className="site-header">
       <div className="top-bar">
         <div className="container top-bar-inner">
-          <a className="top-bar-item" href="tel:+447782377307">
+          <a className="top-bar-item" href="tel:+447949698279">
             <img src="/phone.png" alt="" className="top-bar-phone-logo" />
-            +447782377307
+            +447949698279
           </a>
           <a
             className="top-bar-item top-bar-hide-sm"

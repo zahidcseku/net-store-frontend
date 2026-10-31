@@ -13,7 +13,7 @@ export default function Footer() {
           <ul className="footer-contact">
             <li>
               <Phone size={15} />
-              <a href="tel:+447782377307">+447782377307</a>
+              <a href="tel:+447949698279">+447949698279</a>
             </li>
             <li>
               <MapPin size={15} />
