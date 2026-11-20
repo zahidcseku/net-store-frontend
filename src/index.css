@@ -73,48 +73,12 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   padding: 0 20px;
 }
 
-/* Hero banner — sits inside the page margins as a rounded card with
-   layered shadow, entrance motion (framer-motion), a hover lift and a
-   light sheen sweep across the frame. */
-.hero-banner {
-  max-width: var(--container);
-  margin: 28px auto 0;
-  padding: 0 20px;
+/* Full-width Black Friday banner strips — same family as the offer cards
+   (rounded, layered shadow, hover lift + zoom). The lead strip is the
+   page's first element and takes the hero's old top spacing. */
+.banner-strip.lead {
+  margin-top: 28px;
 }
-.hero-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow:
-    0 24px 48px -20px rgba(10, 17, 40, 0.4),
-    0 8px 18px -10px rgba(10, 17, 40, 0.22);
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
-}
-.hero-frame img {
-  width: 100%;
-  display: block;
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.hero-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.32) 50%, transparent 58%);
-  transform: translateX(-130%) skewX(-6deg);
-  transition: transform 1s ease;
-  pointer-events: none;
-}
-.hero-banner:hover .hero-frame {
-  transform: translateY(-5px);
-  box-shadow:
-    0 34px 60px -22px rgba(10, 17, 40, 0.48),
-    0 12px 24px -10px rgba(10, 17, 40, 0.26);
-}
-.hero-banner:hover .hero-frame img { transform: scale(1.035); }
-.hero-banner:hover .hero-frame::after { transform: translateX(130%) skewX(-6deg); }
-
-/* Full-width Black Friday banner strips — same family as the hero frame
-   (rounded, layered shadow, hover lift + zoom). */
 .banner-strip {
   margin-top: 20px;
   border-radius: 16px;

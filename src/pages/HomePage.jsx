@@ -26,21 +26,10 @@ export default function HomePage() {
   return (
     <>
       <motion.section
-        className="hero-banner"
-        initial={{ opacity: 0, y: 28, scale: 0.985 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="hero-frame">
-          <img src="/hero.webp" alt="Custom gaming PC builds from £249" />
-        </div>
-      </motion.section>
-
-      <motion.section
-        className="container banner-strip"
+        className="container banner-strip lead"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
       >
         <img src={EVENT_BANNER.src} alt={EVENT_BANNER.alt} loading="lazy" />
       </motion.section>
